@@ -133,15 +133,7 @@ body {
             float: right;
             margin: 20px 20px 20px 20px;
         }
-/*
-        #content-block #sections p {
-            float: right;
-        }
 
-        #content-block #sections img {
-            float: left;
-        }
-*/
         #content-block #sections .article-content {
             height: 330px;
         }
@@ -154,13 +146,9 @@ body {
 
         #content-block #sections p {
             margin-right: 10px;
+            margin-left: 10px;
             text-align: justify;
-            padding-left: 0spx;
+            padding-left: 0px;
             
         }
 /*END Content block*/
-
-img {
-    height: 250px;
-    width: 250px;
-}
