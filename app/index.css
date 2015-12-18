@@ -9,6 +9,12 @@ body {
     background-color: #FFFFFF;
 }
 
+@media(min-width: 300px) and (max-width: 500px) {
+    body {
+        background-color: #FFFFFF;
+    }
+}
+
 .font-monospace {
     font-family: monospace;    
 }
@@ -88,8 +94,14 @@ body {
 
             position: relative;
             left: 30%;
+            margin: 0 0 0 0;
             padding-bottom: 5px;
             font-size: 15px;
+            width: 115px;
+        }
+
+        #content-block #nav-bar li:hover {
+            color: blue;
         }
 
         /*Sections*/
