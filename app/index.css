@@ -1,3 +1,5 @@
+/*Media query for Moto E with viewport of 270 X 480*/
+
 html {
     height: 100%;
 }
@@ -8,12 +10,13 @@ body {
     top: 40px;
     background-color: #FFFFFF;
 }
-
-@media(min-width: 300px) and (max-width: 500px) {
+@media (max-width: 270px) {
     body {
-        background-color: #FFFFFF;
+        top:0;
+        margin: 40px 0 0 0;
     }
 }
+
 
 .font-monospace {
     font-family: monospace;    
@@ -32,7 +35,19 @@ body {
     right: 0;
     top: 0;
     box-shadow: 0 1px 3px rgb(0,0,0);
+    animation-name: appear;
+    animation-duration: 2s;
 }
+@media (max-width: 360px) {
+    #upper-header {
+        height: 40px;
+    }
+}
+@keyframes appear {
+    from {opacity: 0.1;}
+    to {opacity: 1;}
+}
+
 
 #upper-header h1 {
     float: left;
@@ -42,6 +57,12 @@ body {
     top: 25%;
     font-size: 30px;
 }
+@media (max-width: 270px) {
+    #upper-header h1 {
+        font-size: 20px;
+    }   
+}
+
 
 #upper-header a {
     float: right;
@@ -53,34 +74,37 @@ body {
     font-family: monospace;
     font-size: 18px;
 }
+@media (max-width: 270px) {
+    #upper-header a {
+        font-size: 15px;
+    }
+}
 /*END Page header*/
 
 /*INIT Content block*/
     #content-block {
         position: static;
     }
-
-        /*Aside*/
+        /*Aside Desktop-only*/
         #content-block #nav-bar {
-            
-
             position: fixed;
             float: right;
             margin: 30px 0 0 80%;
             width: 20%;
             height: 40%;
-            
+        }
+        @media (max-width: 270px) {
+            #content-block #nav-bar {
+                display: none;
+            }   
         }
 
         #content-block #nav-bar aside {
             background-color: #607D8B;
-
             position: fixed;
             width: 20%;
             height: 40%;
-            /*margin: 30px 0 0 79%;*/
-            box-shadow: 0 1px 2px rgb(50,50,50);
-            
+            box-shadow: 0 1px 2px rgb(50,50,50);            
         }
 
         #content-block #nav-bar h3 {
@@ -100,16 +124,17 @@ body {
             width: 115px;
         }
 
-        #content-block #nav-bar li:hover {
-            color: blue;
-        }
-
         /*Sections*/
         #content-block #sections {
             float: left;
             width: 80%;
             height: 100%;
             left: 30px;
+        }
+        @media(max-width: 270px) {
+            #content-block #sections {
+                width: 100%;
+            }
         }
 
         #content-block  #sections section {
@@ -120,30 +145,59 @@ body {
             right: 40px;
             padding-top: 30px;
             
-            margin: 0 30px 0 20px;
-
-            
+            margin: 0 30px 0 20px;   
         }
+        @media(max-width: 270px) {
+            #content-block #sections section {
+                margin: 0 0 0 0;
+            }
+        }
+
+
         #content-block #sections article {
             background-color: #448AFF;
             clear: right;
             height: 400px;
             overflow: hidden;
             box-shadow: 0 1px 2px rgb(50,50,50);
+            animation-name: slide;
+            animation-duration: 1s;
+        }
+        @keyframes slide {
+            from {transform: translateX(-1200px);}
+            to {transform: translateX(0px)}
         }
 
         #content-block #sections header {
             height: 70px;
+        }
+        @media(max-width: 270px) {
+            #content-block #sections header {
+                height: 30px;
+                width: 100%;
+            }
         }
 
         #content-block #sections h2 {
             float: left;
             margin: 20px 20px 20px 20px;
         }
+        @media(max-width: 270px) {
+            #content-block #sections h2 {
+                background-color: green;
+                margin: 0 40px 0 40px;
+                width: 190px;
+            }
+        }
 
         #content-block #sections button {
             float: right;
             margin: 20px 20px 20px 20px;
+        }
+        @media(max-width: 270px) {
+            #content-block #sections button {
+                display: none;
+            }
         }
 
         #content-block #sections .article-content {
@@ -154,6 +208,11 @@ body {
             
             float: left;
             margin: 0 10px 0 10px;
+        }
+        @media(max-width: 270px) {
+            #content-block #sections img {
+                width: 100%;
+            }
         }
 
         #content-block #sections p {
