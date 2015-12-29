@@ -80,14 +80,32 @@
                     </div>
                     <div class="article-content" class="font-monospace">
                         <img src="images/obl.png" width="300px" height="200px">
-                        <p>The Elder Scrolls IV: Oblivion is an action role-playing video game developed by Bethesda Game Studios and published by Bethesda Softworks and the Take-Two Interactive subsidiary, 2K Games. It is the fourth installment in The Elder Scrolls action fantasy video game series, following The Elder Scrolls III: Morrowind and preceding The Elder Scrolls V: Skyrim. Oblivion was first released in March 2006 for Microsoft Windows and Xbox 360. A mobile phone version of the game was released in May 2006, and a PlayStation 3 version was shipped in March 2007. After a number of smaller content releases, a major expansion pack, Shivering Isles, was distributed. The Elder Scrolls IV: Oblivion Game of the Year Edition (a package including both Shivering Isles and the official expansion pack Knights of the Nine) was released in 2007 for Microsoft Windows, Xbox 360, and PlayStation 3. A fifth-anniversary edition was shipped in 2011.</p>
+                        <p class="font-monospace">The Elder Scrolls IV: Oblivion is an action role-playing video game developed by Bethesda Game Studios and published by Bethesda Softworks and the Take-Two Interactive subsidiary, 2K Games. It is the fourth installment in The Elder Scrolls action fantasy video game series, following The Elder Scrolls III: Morrowind and preceding The Elder Scrolls V: Skyrim. Oblivion was first released in March 2006 for Microsoft Windows and Xbox 360. A mobile phone version of the game was released in May 2006, and a PlayStation 3 version was shipped in March 2007. After a number of smaller content releases, a major expansion pack, Shivering Isles, was distributed. The Elder Scrolls IV: Oblivion Game of the Year Edition (a package including both Shivering Isles and the official expansion pack Knights of the Nine) was released in 2007 for Microsoft Windows, Xbox 360, and PlayStation 3. A fifth-anniversary edition was shipped in 2011.</p>
                     </div>
                 </article>
             </section>
         </div>
     </div>
 
+    <button id="theButton" onclick="loadXMLDoc()" type="button">Change Content</button>
+    <p id="demo">Some text</p>
+
     <script src="app/index.js"></script>
+    <script>
+        function loadXMLDoc() {
+              var xmlhttp = new XMLHttpRequest();
+              xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                  document.getElementById("demo").innerHTML =
+                  xmlhttp.responseText;
+                }
+              };
+              xmlhttp.open("GET", "data.txt", true);
+              xmlhttp.send();
+        }
+    </script>
+
+
 </body>
 
 </html>
