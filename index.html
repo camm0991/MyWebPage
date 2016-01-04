@@ -28,6 +28,8 @@
 
 <body>
     <div id="upper-header" class="font-monospace">
+    <!--<button id="btn" type="button">Change Content</button>
+    <p id="demo">Some text</p>-->
         <h1>
             Games Blog
         </h1>
@@ -38,15 +40,11 @@
     
     <div id="content-block">
         <div id="nav-bar" class="font-monospace">
-            <aside>
-                <nav>
-                    <header>
-                        <h3>Exiting News</h3>
-                    </header>
-                    <li>Other news 1</li>
-                    <li>Other news 2</li>
-                    <li>Other news 3</li>
-                </nav>
+            <aside id="newsContainer">
+                <header>
+                    <h3>Exiting News</h3>
+                </header>
+
             </aside>    
     </div>
 
@@ -86,26 +84,7 @@
             </section>
         </div>
     </div>
-
-    <button id="theButton" onclick="loadXMLDoc()" type="button">Change Content</button>
-    <p id="demo">Some text</p>
-
     <script src="app/index.js"></script>
-    <script>
-        function loadXMLDoc() {
-              var xmlhttp = new XMLHttpRequest();
-              xmlhttp.onreadystatechange = function() {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                  document.getElementById("demo").innerHTML =
-                  xmlhttp.responseText;
-                }
-              };
-              xmlhttp.open("GET", "data.txt", true);
-              xmlhttp.send();
-        }
-    </script>
-
-
 </body>
 
 </html>
