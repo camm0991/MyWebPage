@@ -1,0 +1,37 @@
+{
+    "data": {
+        "sections": [
+            {
+                "id":1,
+                "title":"Amazing game",
+                "image":"http://localhost/WebPage/images/generic.png",
+                "article":"Article content"
+
+            },
+            {
+                "id":2,
+                "title":"Amazing game",
+                "image":"http://localhost/WebPage/images/generic.png",
+                "article":"Article content"
+
+            },
+            {
+                "id":3,
+                "title":"Amazing game",
+                "image":"http://localhost/WebPage/images/generic.png",
+                "article":"Article content"
+
+            },
+            {
+                "id":4,
+                "title":"Amazing game",
+                "image":"http://localhost/WebPage/images/generic.png",
+                "article":"Article content"
+            }
+        ],
+        "menu": [
+            {"id":1, "title":"Amazing link"},
+            {"id":2, "title":"Amazing link"}
+        ]
+    }
+}
